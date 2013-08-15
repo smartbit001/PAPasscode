@@ -307,11 +307,7 @@
     messageLabel.hidden = YES;
     failedImageView.hidden = NO;
     failedAttemptsLabel.hidden = NO;
-    if (_failedAttempts == 1) {
-        failedAttemptsLabel.text = NSLocalizedString(@"1 Failed Passcode Attempt", nil);
-    } else {
-        failedAttemptsLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%d Failed Passcode Attempts", nil), _failedAttempts];
-    }
+    failedAttemptsLabel.text = NSLocalizedString(@"Passcode incorrect", nil);
     [failedAttemptsLabel sizeToFit];
     CGFloat bgWidth = failedAttemptsLabel.bounds.size.width + FAILED_MARGIN*2;
     CGFloat x = floor((contentView.bounds.size.width-bgWidth)/2);
